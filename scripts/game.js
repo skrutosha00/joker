@@ -63,7 +63,11 @@ document.querySelector('.bet_type_cont').onclick = () => {
 }
 
 document.querySelector('.add').onclick = () => {
-    if (Number(totalBet.innerHTML) + currentCoin > Number(balance.innerHTML) || bankCoins[currentCoin] == 8) { return }
+    if (bankCoins[currentCoin] == 8) { return }
+    if (Number(totalBet.innerHTML) + currentCoin > Number(balance.innerHTML)) {
+        animateOnce('.add')
+        return
+    }
 
     let coinPic = document.createElement('img')
     coinPic.classList.add('bank_coin')
@@ -76,6 +80,8 @@ document.querySelector('.add').onclick = () => {
 
     bankCoins[currentCoin] += 1
     totalBet.innerHTML = Number(totalBet.innerHTML) + currentCoin
+
+    updateDealButton()
     updateWin()
 }
 
@@ -89,11 +95,13 @@ document.querySelector('.clear').onclick = () => {
     }
 
     totalBet.innerHTML = 0
+    updateDealButton()
     updateWin()
 }
 
 document.querySelector('.play').onclick = () => {
     if (!active || totalBet.innerHTML == 0 || Number(totalBet.innerHTML) > Number(balance.innerHTML)) { return }
+
     active = false
     changeBalance(-Number(totalBet.innerHTML))
 
@@ -142,7 +150,7 @@ document.querySelector('.warning .button').onclick = () => {
     bankerCards.style.right = '-200px'
     playerExtraCards.style.left = '-200px'
     bankerExtraCards.style.right = '-200px'
-    
+
     warning.style.top = '-70px'
 
     setTimeout(() => {
@@ -198,4 +206,12 @@ function getScore(cardValue) {
 
 function updateWin() {
     win.innerHTML = Number(totalBet.innerHTML) * betTypes[betType.innerHTML]
+}
+
+function updateDealButton() {
+    if (totalBet.innerHTML == 0) {
+        document.querySelector('.play').classList.add('disabled')
+    } else {
+        document.querySelector('.play').classList.remove('disabled')
+    }
 }

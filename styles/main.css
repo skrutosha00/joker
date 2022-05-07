@@ -60,6 +60,8 @@ input {
   height: 36px;
   line-height: 36px;
   font-size: 20px;
+
+  transition: color 0.2s ease;
 }
 
 .buy {
@@ -85,6 +87,7 @@ input {
   .shop_button {
     width: 90px;
     font-size: 18px;
+    font-size: 14px;
   }
 
   .button {

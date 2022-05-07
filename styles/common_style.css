@@ -47,7 +47,8 @@ a {
   border: 3px solid transparent;
 }
 
-.balance_field, .name {
+.balance_field,
+.name {
   width: 146px;
   height: 54px;
   line-height: 27px;

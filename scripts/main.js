@@ -51,7 +51,13 @@ for (let item of items) {
 
     buyButton.onclick = () => {
         if (buyButton.innerHTML != 'SELECT') {
-            if (Number(balance.innerHTML) <= item.price) { return }
+            if (Number(balance.innerHTML) <= item.price) {
+                buyButton.style.color = 'red'
+                setTimeout(() => {
+                    buyButton.style.color = 'white'
+                }, 500);
+                return
+            }
             changeBalance(-Number(item.price))
 
             buyButton.innerHTML = 'SELECT'
