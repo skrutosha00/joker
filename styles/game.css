@@ -1,0 +1,274 @@
+.home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 35px;
+  height: 30px;
+}
+
+.warning {
+  position: absolute;
+  left: 25%;
+  top: -70px;
+  z-index: 10;
+
+  height: 65px;
+  width: 50%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: rgba(0, 0, 0, 0.75);
+
+  transition: top 0.2s ease;
+}
+
+.table {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  left: 5%;
+  width: 90%;
+}
+
+.bank {
+  position: absolute;
+  position: relative;
+  top: 5px;
+  left: 35%;
+
+  width: 30%;
+}
+
+.table img,
+.bank .box {
+  width: 100%;
+  height: 100%;
+}
+
+.bank .bank_coin {
+  position: absolute;
+
+  width: 21px;
+  height: 21px;
+
+  left: 0;
+  top: 0;
+}
+
+.bet_cont {
+  position: fixed;
+  left: 5px;
+  bottom: 70px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 146px;
+  height: 53px;
+  border-radius: 10px;
+}
+
+.coin_row {
+  display: flex;
+  position: absolute;
+  transition: left 0.1s ease;
+
+  width: 33px;
+  height: 33px;
+}
+.coin_row img {
+  width: 33px;
+  height: 33px;
+}
+
+.bet_cont .arrow {
+  width: 37px;
+  height: 37px;
+}
+
+.bet_cont .arrow.left {
+  transform: rotate(180deg);
+}
+
+.bet_cont .bet_amount {
+  width: 33px;
+  height: 33px;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 65px;
+
+  background: linear-gradient(180deg, #d3bb8c 0%, #a2772c 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.control {
+  display: flex;
+}
+
+.control .block {
+  width: 85px;
+  height: 27px;
+  border: 1px solid transparent;
+  line-height: 27px;
+  border-radius: 3px;
+}
+
+.button {
+  height: 55px;
+  line-height: 55px;
+}
+
+.nick {
+  position: absolute;
+  top: 15%;
+
+  width: 135px;
+  height: 36px;
+  line-height: 36px;
+
+  background: #e20000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.player.nick {
+  left: 10%;
+}
+
+.banker.nick {
+  right: 10%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 35%;
+  width: 170px;
+
+  transition: left 0.3s ease, right 0.3s ease;
+}
+
+.cards img {
+  width: 82px;
+  height: 120px;
+}
+
+.cards.player {
+  left: -200px;
+}
+
+.cards.banker {
+  right: -200px;
+}
+
+.cards.extra {
+  width: 82px;
+}
+
+.cards.player.extra {
+  left: -200px;
+}
+
+.cards.banker.extra {
+  right: -200px;
+}
+
+.rules {
+  position: absolute;
+  z-index: 10;
+  left: 1%;
+  top: 5px;
+
+  width: 98%;
+  background-color: rgba(0, 0, 0, 0.85);
+
+  transition: left 0.3s ease;
+}
+
+.rules .text {
+  margin: 10px;
+  font-size: 12px;
+}
+
+.rules .button {
+  margin: auto;
+}
+
+@media screen and (max-width: 785px) {
+  .button {
+    width: 100px;
+  }
+
+  .bank .bank_coin {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .control .block {
+    width: 75px;
+  }
+
+  .rules h1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    width: 130px;
+  }
+
+  .cards.extra {
+    width: 61px;
+  }
+
+  .cards img {
+    width: 61px;
+    height: 90px;
+  }
+
+  .button {
+    width: 75px;
+    line-height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .control .block {
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .balance_field {
+    width: 120px;
+  }
+
+  .rules .text {
+    font-size: 10px;
+  }
+}

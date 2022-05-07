@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, width=device-width, viewport-fit=cover"
+    />
+    <link rel="shortcut icon" href="../png/icon.png" />
+    <link rel="stylesheet" href="../styles/common_style.css" />
+    <link rel="stylesheet" href="../styles/game.css" />
+    <title>Two Joker</title>
+  </head>
+  <body>
+    <div class="table">
+      <img src="../png/table.png" alt="table" />
+    </div>
+
+    <div class="bank">
+      <img src="../png/bank.png" alt="bank" class="box" />
+    </div>
+
+    <a href="./main.html"
+      ><img src="../png/home.png" alt="home" class="home"
+    /></a>
+
+    <div class="bet_cont block">
+      <img src="../png/arrow.png" alt="left" class="left arrow" />
+      <div class="bet_amount"></div>
+      <img src="../png/arrow.png" alt="left" class="right arrow" />
+    </div>
+
+    <div class="warning">
+      <div class="text"></div>
+      <div class="button">PLAY AGAIN</div>
+    </div>
+
+    <div class="rules">
+      <h1>RULES</h1>
+      <div class="text">
+        In baccarat, both the player and the banker receive two cards at the
+        beginning of the game. The player has an opportunity to bet on player's
+        win, banker's win or tie. To change the bet player should use ON button
+        on the bottom of the screen<br /><br />
+
+        In baccarat, cards have a point value: the 2 through 9 cards in each
+        suit are worth face value (in points); the 10, jack, queen, and king
+        have no point value (i.e. are worth zero); aces are worth 1 point.<br /><br />
+
+        Hands are valued according to the units digit of the sum of their
+        constituent cards. For example, a hand consisting of 2 and 3 is worth 5,
+        but a hand consisting of 6 and 7 is worth 3 (i.e., the 3 being the units
+        digit in the combined points total of 13). The highest possible hand
+        value in baccarat is therefore nine.<br /><br />
+
+        If the player has an initial total of 5 or less, they draw a third card.
+        If the player has an initial total of 6 or 7, they stand.<br /><br />
+      </div>
+      <div class="button">OK</div>
+    </div>
+
+    <div class="player nick"></div>
+    <div class="banker nick">BANKER</div>
+
+    <div class="player cards"></div>
+    <div class="player cards extra"></div>
+    <div class="banker cards"></div>
+    <div class="banker cards extra"></div>
+
+    <div class="footer">
+      <div class="balance_field block"></div>
+
+      <div class="control">
+        <div>
+          <div class="block">BET</div>
+          <div class="block total_bet">0</div>
+        </div>
+        <div class="bet_type_cont">
+          <div class="block">ON</div>
+          <div class="block bet_type">PLAYER</div>
+        </div>
+        <div>
+          <div class="block">WIN</div>
+          <div class="block win">0</div>
+        </div>
+      </div>
+
+      <div class="button add">Add coin</div>
+      <div class="button clear">Clear bets</div>
+      <div class="button play">Deal</div>
+    </div>
+
+    <script src="../scripts/game.js" type="module"></script>
+  </body>
+</html>
