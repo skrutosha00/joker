@@ -1,7 +1,3 @@
-.body {
-  width: 100vw;
-}
-
 .home {
   position: absolute;
   top: 20px;
@@ -67,7 +63,7 @@
 .bet_cont {
   position: fixed;
   left: 5px;
-  top: calc(100vh - 75px - 53px);
+  bottom: 75px;
 
   display: flex;
   justify-content: space-around;
@@ -110,8 +106,8 @@
 
 .footer {
   position: fixed;
-  top: calc(100vh - 65px);
   max-width: 100vw;
+  bottom: 0;
   right: 0;
   left: 0;
 
